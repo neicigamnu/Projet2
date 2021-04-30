@@ -1,0 +1,800 @@
+/*
+BOUYAGUI CHEIKH
+PROJET 2 RESERVIA 
+OPENCLASSROOMS
+*/
+
+body {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+}
+
+main {
+    padding-left: 50px;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    padding: 15px 40px 0 0;
+}
+
+#hebergements {
+    margin-left: auto;
+    /* padding-top: 0px; */
+}
+
+
+/*#activités {
+    padding-top: 0px; 
+}*/
+
+#hebergements a {
+    color: black;
+    font-size: 1.125rem;
+    padding-top: 43px;
+}
+
+a {
+    text-decoration: none;
+    color: #0065FC;
+    padding: 15px 40px 0 40px;
+}
+
+#activités a {
+    font-size: 1.125rem;
+    color: black;
+    padding-top: 43px;
+}
+
+#inscription {
+    color: #0065FC;
+    font-weight: bold;
+    font-size: 1.125rem;
+    padding-left: 30px;
+}
+
+#hebergements a:hover,
+#activités a:hover {
+    border-top: 3px solid #0065FC;
+    color: #0065FC;
+}
+
+
+/* #inscription a:hover {
+     font-size: 20px; }*/
+
+
+/*------------------PARTIE FILTRES --------------*/
+
+#intro h2 {
+    font-size: 1.1rem;
+    font-weight: 800;
+}
+
+#intro h3 {
+    font-size: 0.8rem;
+    ;
+    font-weight: 500;
+}
+
+form {
+    display: inline-flex;
+    /* text-align: justify; */
+}
+
+
+/* textes modifiés*/
+
+#recherche {
+    border-color: rgb(221 221 221 / 17%);
+}
+
+.fa-map-marker-alt {
+    background-color: #F2F2F2;
+    width: 20px;
+    height: 25px;
+    border-top-left-radius: 13px;
+    border-bottom-left-radius: 13px;
+    padding: 10px 0 0 12px;
+}
+
+#rechercher {
+    background-color: #0065FC;
+    color: white;
+    border-top-right-radius: 13px;
+    border-bottom-right-radius: 13px;
+    border: none;
+    /* width: 100px; */
+}
+
+button {
+    display: none;
+}
+
+
+/* barre de recherche finie*/
+
+#filtres {
+    display: flex;
+    align-items: center;
+    /* align-content: flex-start; 
+   
+    /* justify-content: start; 
+    flex-wrap: wrap;*/
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+#filtres p {
+    margin-bottom: 10px;
+}
+
+.fa-child,
+.fa-dog,
+.fa-heart,
+.fa-money-bill-wave {
+    background-color: #deeafc;
+    color: #0065FC;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+}
+
+#billet {
+    display: flex;
+    align-items: center;
+    border: solid 2px #d4d4d4;
+    border-radius: 20px;
+    border-left: none;
+    width: 150px;
+    height: 35px;
+    margin-left: 18px;
+    margin-bottom: 10px;
+}
+
+#enfant {
+    display: flex;
+    align-items: center;
+    border: solid 2px #d4d4d4;
+    border-radius: 20px;
+    border-left: none;
+    width: 120px;
+    height: 35px;
+    margin-left: 8px;
+    margin-bottom: 10px;
+}
+
+#coeur {
+    display: flex;
+    align-items: center;
+    border: solid 2px #d4d4d4;
+    border-radius: 20px;
+    border-left: none;
+    width: 150px;
+    height: 35px;
+    margin-left: 18px;
+    margin-bottom: 10px;
+}
+
+#chien {
+    display: flex;
+    align-items: center;
+    border: solid 2px #d4d4d4;
+    border-radius: 30px;
+    border-left: none;
+    width: 200px;
+    height: 35px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+
+/* centrage de l'icone*/
+
+.fa-money-bill-wave,
+.fa-heart,
+.fa-dog,
+.fa-child {
+    padding: 5px 5px;
+    margin-right: 9px;
+}
+
+
+/* centrer les mots avec margin right*/
+
+.fa-money-bill-wave::before,
+.fa-heart::before,
+.fa-child::before,
+.fa-dog::before {
+    display: flex;
+    justify-content: center;
+    margin-top: 8px;
+}
+
+
+/* bouton info + texte*/
+
+#bouton_info p {
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-top: 0px;
+}
+
+.fa-info:before {
+    color: #0065FC;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 1px #d4d4d4;
+    border-radius: 100%;
+    width: 10px;
+    height: 10px;
+    margin-right: 8px;
+    padding: 3px;
+}
+
+
+/* FIN PARTIE FILTRES / PARTIE HEBERGEMENTS + POPULAIRES*/
+
+
+/* -------------------SECTION HEBERGEMENT A MARSEILLE (lgmt + aside)---------------------------------*/
+
+#hebergements_a_marseille {
+    margin-top: 40px;
+    display: flex;
+}
+
+
+/* -------------PARTIE LOGEMENT A MARSEILLES-------------------------*/
+
+.logementmarseille {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #f2f2f2;
+    width: 90%;
+    border-radius: 20px;
+    padding: 2px 30px 50px 35px;
+    margin-right: 40px;
+    height: auto;
+}
+
+.logementmarseille h2 {
+    width: 100%;
+    padding-left: 10px;
+}
+
+.logementmarseille figure {
+    background: white;
+    border-radius: 20px;
+    width: 29%;
+    padding: 6px;
+    margin: 1%;
+    height: 180px;
+}
+
+.logementmarseille img {
+    width: 100%;
+    max-height: 115px;
+    border-radius: 12px 12px 0 0;
+    object-fit: cover;
+}
+
+
+/* -------------FIGCAPTION LEGENDE IMAGES LOGEMENT MARSEILLE----------------------*/
+
+.logementmarseille figcaption h3,
+.logementmarseille figcaption p {
+    font-size: 1.125rem;
+    margin: 0;
+}
+
+.logementmarseille figcaption {
+    font-size: 1.125rem;
+    padding-left: 10px;
+}
+
+.logementmarseille figcaption p {
+    font-size: 0.95rem;
+}
+
+
+/* COULEURS DES ETOILES*/
+
+.fa-star {
+    color: #0065FC;
+    font-size: small;
+    margin: -2px;
+}
+
+.grey {
+    color: rgb(218, 214, 214);
+}
+
+
+/* AFFICHER PLUS*/
+
+#plus {
+    font-weight: bolder;
+    font-size: large;
+    margin-inline: 15px;
+}
+
+
+/* DEBUT PARTIE LES PLUS POPULAIRES ---------- ASIDE -------------*/
+
+aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.populaires {
+    display: flex;
+    align-items: center;
+    padding-right: 85px;
+    font-size: 1.2rem;
+    ;
+}
+
+.populaires h2 {
+    padding-right: 50px;
+    font-size: 1.2rem;
+    ;
+}
+
+.fa-chart-line:before {
+    padding-left: 480%
+}
+
+#les_plus_populaires {
+    background-color: #f2f2f2;
+    width: 35%;
+    height: auto;
+    border-radius: 20px;
+    padding: 7px 20px 5px 35px;
+}
+
+#les_plus_populaires figure {
+    display: flex;
+    background: white;
+    border-radius: 20px;
+    width: 94%;
+    padding: 4px;
+}
+
+#les_plus_populaires img {
+    border-radius: 20px 0 0 20px;
+    width: 40%;
+    margin-right: 4%;
+    height: 145px;
+    object-fit: cover;
+}
+
+#les_plus_populaires figcaption {
+    font-size: 0.7rem;
+}
+
+
+/* -----------mettre les étoiles plus bas dans figcaption du aside------------------------------- */
+
+#les_plus_populaires :nth-child(2) figcaption p {
+    margin-block-end: 4.5em;
+    font-size: 0.9rem;
+}
+
+#les_plus_populaires :nth-child(3) figcaption p {
+    margin-block-end: 3em;
+    font-size: 0.9rem;
+}
+
+#les_plus_populaires :nth-child(4) figcaption p {
+    margin-block-end: 3.2em;
+    font-size: 0.9rem;
+}
+
+
+/* ----------------PARTIE ACTIVITES MARSEILLE------------------------------*/
+
+#activites_a_marseille {
+    display: flex;
+}
+
+#activites_a_marseille img {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    object-fit: cover;
+    box-shadow: 0 0 10px 0 rgb(221 218 218);
+    margin-bottom: -2px;
+}
+
+#activites_a_marseille figcaption {
+    border-radius: 0 0 20px 20px;
+    font-size: 0.6rem;
+    background: rgb(255, 255, 255);
+    box-shadow: 0 3px 23px 3px rgb(221 218 218);
+    padding: 20px;
+}
+
+#activites_a_marseille figcaption h2 {
+    margin: -3px;
+}
+
+.port :nth-child(1) {
+    margin-inline-start: 0;
+}
+
+
+/* -----------------------------------Taille des images in figure --------------------------------  */
+
+.port img,
+.calanques img {
+    width: 20vw;
+    height: 50vh;
+}
+
+.img1 img {
+    width: 22vw;
+    height: 20vh;
+}
+
+.img2 img {
+    width: 22vw;
+    height: 16vh;
+}
+
+.img3 img {
+    width: 22vw;
+    height: 20vh;
+}
+
+.img4 img {
+    width: 22vw;
+    height: 16vh;
+}
+
+figure.img1,
+figure.img3 {
+    padding-bottom: 30px;
+    margin-left: 6px;
+}
+
+figure.img2,
+figure.img4 {
+    margin-left: 6px;
+}
+
+.calanques figure {
+    margin-left: 6px;
+}
+
+
+/* -----------------------------ESPACEMENT ACTIVITES/FOOTER---------------------------------*/
+
+section {
+    margin-bottom: 40px;
+    margin-right: 20px;
+}
+
+
+/* --------------------------------FOOTER--------------------------------------*/
+
+footer {
+    display: flex;
+    background-color: rgba(224, 221, 221, 0.699);
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+footer h1 {
+    font-size: 1.2rem;
+}
+
+footer p {
+    font-size: 0.95rem;
+}
+
+#apropos {
+    margin-right: 15%;
+    margin-left: 50px;
+}
+
+#assistance {
+    margin-left: 20%;
+}
+
+
+/* ---------------------------------------------------------------------------- */
+
+
+/* arrangement de l'ordre et emplacement en mobile */
+
+
+/* -------------------------------------------------------------------------- */
+
+@media (max-device-width: 480px) {
+    main {
+        padding: 0;
+    }
+    #intro,
+    #searchbar,
+    #filtres,
+    #bouton_info {
+        margin-left: 15px;
+    }
+    ul {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        align-content: center;
+        padding: 0;
+    }
+    #activités {
+        order: 1;
+    }
+    #hebergements {
+        order: 2;
+        margin-bottom: 20px;
+    }
+    #hebergements,
+    #activités {
+        order: 1;
+    }
+    /* ligne  */
+    #hebergements a {
+        border-bottom: solid 3px rgb(221, 221, 221);
+        padding: 0px 70px 10px 20px;
+    }
+    #activités a {
+        border-bottom: solid 3px rgb(221, 221, 221);
+        padding: 0px 60px 10px 52px;
+    }
+    /* enlever la marge bottom du texte et aligner avec activités */
+    ul #hebergements {
+        margin: 0px;
+    }
+    /* decaler le bouton inscription sur la droite */
+    #inscription a {
+        margin-left: 90%;
+    }
+    #hebergements a:hover {
+        border-bottom: solid 3px #0065FC;
+        border-top: none;
+    }
+    #activités a:hover {
+        border-bottom: solid 3px #0065FC;
+        border-top: none;
+    }
+    /* -------espacement logo + s'inscrire***** d'activités / hebergements--------------- */
+    #logo {
+        line-height: 4em;
+        padding-left: 1em;
+    }
+    #inscription {
+        padding-bottom: 20px
+    }
+    /* PARTIE SECTION FILTRES */
+    #intro h2 {
+        font-size: 1.3rem;
+        margin-top: 40px;
+        margin-left: 10px;
+    }
+    #intro h2 {
+        margin-left: 10px;
+        margin-bottom: 20px;
+        font-size: 1.125rem;
+    }
+    #bouton_info p {
+        font-size: 1.125rem;
+        font-weight: 500;
+        margin-top: 0px
+    }
+    button {
+        display: inline-block;
+        color: white;
+        background-color: #0065FC;
+        border-top-right-radius: 13px;
+        border-bottom-right-radius: 13px;
+        border: none;
+        width: 40px;
+    }
+    #rechercher {
+        display: none;
+    }
+    #recherche {
+        width: 250px;
+    }
+    .fa-map-marker-alt {
+        background-color: #F2F2F2;
+        width: 30px;
+        height: 25px;
+        border-top-left-radius: 13px;
+        border-bottom-left-radius: 13px;
+        padding: 15px 2px 7px 22px;
+    }
+    #filtres p {
+        margin-bottom: -5px;
+        margin-top: 25px;
+        font-size: 1.125rem;
+    }
+    #chien {
+        display: flex;
+        align-items: center;
+        border: solid 2px #d4d4d4;
+        border-radius: 30px;
+        border-left: none;
+        width: 200px;
+        height: 35px;
+        margin-left: 17px;
+        margin-bottom: 10px;
+    }
+    #filtres ul {
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        margin-left: -19px;
+        padding: 0px 40px 0px 0px;
+    }
+    /*----------------------POPULAIRES--------------------------------*/
+    #hebergements_a_marseille {
+        display: flex;
+        flex-flow: column-reverse;
+        width: 100%;
+    }
+    .logementmarseille {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        width: 95%;
+        margin-left: 15px;
+        padding: 0;
+    }
+    .logementmarseille figure {
+        background: white;
+        border-radius: 20px;
+        width: 95%;
+        padding: 6px;
+        margin: 1%;
+        height: 180px;
+        box-shadow: 0 3px 23px 3px rgb(221 218 218);
+    }
+    .logementmarseille h2 {
+        width: 100%;
+    }
+    #les_plus_populaires {
+        width: 100%;
+        padding: 0px 0 30px 0px;
+    }
+    #activites_a_marseille {
+        display: flex;
+        flex-direction: column;
+    }
+    #activites_a_marseille img {
+        width: 370px;
+        height: 150px;
+    }
+    #activites_a_marseille figcaption {
+        width: 330px;
+    }
+    .marseille {
+        margin-left: 25px;
+    }
+    /*-----FOOTER--------------*/
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        padding-left: 30px
+    }
+    #apropos,
+    #assistance {
+        margin: 0%;
+    }
+}
+
+
+/* ----------AJUSTEMENT IPHONE 8     ********375PX****--------------------------------------------- */
+
+@media (max-device-width: 375px) {
+    ul #hebergements {
+        margin: -12px
+    }
+    #inscription a {
+        margin-left: 65%;
+    }
+    #intro,
+    #searchbar,
+    #filtres,
+    #bouton_info {
+        margin-left: 8px;
+    }
+    #bouton_info p {
+        font-size: 1.125rem;
+    }
+    .populaires h2 {
+        padding-right: 10px;
+        font-size: 1.4rem;
+    }
+    #activites_a_marseille {
+        width: 375px;
+    }
+    #activites_a_marseille img {
+        width: 340px;
+        height: 150px;
+    }
+    #activites_a_marseille figcaption {
+        width: 300px;
+    }
+}
+
+
+/* -------------------------------------------------------------------------------------------------------- */
+
+
+/* MEDIA QUERIES POUR TABLETTE / IPAD 768PX -----------------------------*/
+
+
+/* ------------------------------------------------------------------------------------------------------------*/
+
+@media (min-device-width: 768px) and (max-device-width: 1024px) {
+    main {
+        padding-left: 25px;
+    }
+    #filtres {
+        font-size: 14px;
+    }
+    #chien {
+        width: 180px;
+    }
+    #hebergements_a_marseille {
+        flex-wrap: wrap-reverse;
+    }
+    #les_plus_populaires,
+    .logementmarseille {
+        width: auto;
+        margin: 10px;
+    }
+    .populaires h2 {
+        margin-right: 260px;
+    }
+    #les_plus_populaires :nth-child(3) figcaption p {
+        margin-block-end: 4em;
+    }
+    #les_plus_populaires :nth-child(4) figcaption p {
+        margin-block-end: 4.2em;
+    }
+    .logementmarseille :nth-child(3) figcaption h3 {
+        margin-block-end: 0.9rem;
+    }
+    .logementmarseille :nth-child(4) figcaption h3 {
+        margin-block-end: 0.9rem;
+    }
+    .logementmarseille figure {
+        height: auto;
+    }
+    #activites_a_marseille {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .garde,
+    .fort {
+        display: flex;
+    }
+    .port img,
+    .calanques img {
+        width: 90vw;
+        height: 20vh;
+    }
+    .img1 img,
+    .img2 img,
+    .img3 img,
+    .img4 img {
+        width: 42vw;
+        height: 20vh;
+    }
+    #assistance {
+        margin-left: 10%;
+    }
+}
