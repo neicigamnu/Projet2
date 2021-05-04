@@ -22,13 +22,7 @@ ul {
 
 #hebergements {
     margin-left: auto;
-    /* padding-top: 0px; */
 }
-
-
-/*#activités {
-    padding-top: 0px; 
-}*/
 
 #hebergements a {
     color: black;
@@ -38,7 +32,10 @@ ul {
 
 a {
     text-decoration: none;
-    color: #0065FC;
+    color: black;
+}
+
+nav a {
     padding: 15px 40px 0 40px;
 }
 
@@ -55,6 +52,10 @@ a {
     padding-left: 30px;
 }
 
+#inscription a {
+    color: #0065FC;
+}
+
 #hebergements a:hover,
 #activités a:hover {
     border-top: 3px solid #0065FC;
@@ -62,18 +63,14 @@ a {
 }
 
 
-/* #inscription a:hover {
-     font-size: 20px; }*/
-
-
 /*------------------PARTIE FILTRES --------------*/
 
-#intro h2 {
+#intro h1 {
     font-size: 1.1rem;
     font-weight: 800;
 }
 
-#intro h3 {
+#intro h2 {
     font-size: 0.8rem;
     ;
     font-weight: 500;
@@ -81,7 +78,6 @@ a {
 
 form {
     display: inline-flex;
-    /* text-align: justify; */
 }
 
 
@@ -106,7 +102,6 @@ form {
     border-top-right-radius: 13px;
     border-bottom-right-radius: 13px;
     border: none;
-    /* width: 100px; */
 }
 
 button {
@@ -150,7 +145,7 @@ button {
     border-left: none;
     width: 150px;
     height: 35px;
-    margin-left: 18px;
+    margin-left: 23px;
     margin-bottom: 10px;
 }
 
@@ -162,7 +157,7 @@ button {
     border-left: none;
     width: 120px;
     height: 35px;
-    margin-left: 8px;
+    margin-left: 23px;
     margin-bottom: 10px;
 }
 
@@ -174,7 +169,7 @@ button {
     border-left: none;
     width: 150px;
     height: 35px;
-    margin-left: 18px;
+    margin-left: 23px;
     margin-bottom: 10px;
 }
 
@@ -186,8 +181,15 @@ button {
     border-left: none;
     width: 200px;
     height: 35px;
-    margin-left: 10px;
+    margin-left: 23px;
     margin-bottom: 10px;
+}
+
+#billet:hover,
+#enfant:hover,
+#coeur:hover,
+#chien:hover {
+    background-color: rgb(119, 169, 243);
 }
 
 
@@ -254,11 +256,23 @@ button {
     flex-wrap: wrap;
     justify-content: space-between;
     background-color: #f2f2f2;
-    width: 80%;
+    width: 90%;
     border-radius: 20px;
     padding: 2px 30px 50px 35px;
     margin-right: 40px;
     height: auto;
+}
+
+.logementmarseille1 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.logementmarseille1 div {
+    margin-bottom: 20px;
+    margin-right: 35px;
 }
 
 .logementmarseille h2 {
@@ -269,15 +283,15 @@ button {
 .logementmarseille figure {
     background: white;
     border-radius: 20px;
-    width: 29%;
+    width: fit-content;
     padding: 6px;
     margin: 1%;
-    height: 180px;
+    height: auto;
 }
 
 .logementmarseille img {
-    width: 100%;
-    max-height: 115px;
+    width: 17vw;
+    max-height: 125px;
     border-radius: 12px 12px 0 0;
     object-fit: cover;
 }
@@ -319,7 +333,7 @@ button {
 #plus {
     font-weight: bolder;
     font-size: large;
-    margin-inline: 15px;
+    margin: 15px;
 }
 
 
@@ -330,6 +344,11 @@ aside {
     flex-direction: column;
     align-items: center;
 }
+
+
+/* aside a {
+    display: flex;
+} */
 
 .populaires {
     display: flex;
@@ -351,7 +370,7 @@ aside {
 
 #les_plus_populaires {
     background-color: #f2f2f2;
-    width: 35%;
+    width: 33%;
     height: auto;
     border-radius: 20px;
     padding: 7px 20px 5px 35px;
@@ -361,8 +380,9 @@ aside {
     display: flex;
     background: white;
     border-radius: 20px;
-    width: 94%;
+    /* width: 94%; */
     padding: 4px;
+    margin: auto;
 }
 
 #les_plus_populaires img {
@@ -377,11 +397,22 @@ aside {
     font-size: 0.7rem;
 }
 
+.pop {
+    margin-bottom: 15px;
+}
+
+
+/* #les_plus_populaires p {
+    margin-bottom: 3em;
+} */
+
 
 /* -----------mettre les étoiles plus bas dans figcaption du aside------------------------------- */
 
+
+/* 
 #les_plus_populaires :nth-child(2) figcaption p {
-    margin-block-end: 4.5em;
+    margin-bottom: 4.5em;
     font-size: 0.9rem;
 }
 
@@ -393,6 +424,11 @@ aside {
 #les_plus_populaires :nth-child(4) figcaption p {
     margin-block-end: 3.2em;
     font-size: 0.9rem;
+} */
+
+#les_plus_populaires figcaption p {
+    font-size: 0.9rem;
+    margin-bottom: 3em;
 }
 
 
@@ -400,6 +436,8 @@ aside {
 
 #activites_a_marseille {
     display: flex;
+    justify-content: space-evenly;
+    margin-right: 30px;
 }
 
 #activites_a_marseille img {
@@ -420,10 +458,6 @@ aside {
 
 #activites_a_marseille figcaption h2 {
     margin: -3px;
-}
-
-.port :nth-child(1) {
-    margin-inline-start: 0;
 }
 
 
@@ -488,7 +522,7 @@ footer {
     padding-bottom: 25px;
 }
 
-footer h1 {
+footer h2 {
     font-size: 1.2rem;
 }
 
@@ -514,7 +548,7 @@ footer p {
 
 /* -------------------------------------------------------------------------- */
 
-@media (max-device-width: 480px) {
+@media all and (max-width: 550px) {
     main {
         padding: 0;
     }
@@ -576,12 +610,12 @@ footer p {
         padding-bottom: 20px
     }
     /* PARTIE SECTION FILTRES */
-    #intro h2 {
+    #intro h1 {
         font-size: 1.3rem;
         margin-top: 40px;
         margin-left: 10px;
     }
-    #intro h2 {
+    #intro h1 {
         margin-left: 10px;
         margin-bottom: 20px;
         font-size: 1.125rem;
@@ -627,7 +661,7 @@ footer p {
         border-left: none;
         width: 200px;
         height: 35px;
-        margin-left: 17px;
+        margin-left: 23px;
         margin-bottom: 10px;
     }
     #filtres ul {
@@ -647,7 +681,7 @@ footer p {
         display: flex;
         flex-direction: column;
         background-color: white;
-        width: 95%;
+        width: 80%;
         margin-left: 15px;
         padding: 0;
     }
@@ -678,7 +712,7 @@ footer p {
     #activites_a_marseille figcaption {
         width: 330px;
     }
-    .marseille {
+    #marseille {
         margin-left: 25px;
     }
     /*-----FOOTER--------------*/
@@ -697,7 +731,7 @@ footer p {
 
 /* ----------AJUSTEMENT IPHONE 8     ********375PX****--------------------------------------------- */
 
-@media (max-device-width: 375px) {
+@media all and (max-width: 376px) {
     ul #hebergements {
         margin: -12px
     }
@@ -738,7 +772,7 @@ footer p {
 
 /* ------------------------------------------------------------------------------------------------------------*/
 
-@media (min-device-width: 768px) and (max-device-width: 1024px) {
+@media all and (min-width: 768px) and (max-width: 1024px) {
     main {
         padding-left: 25px;
     }
@@ -759,7 +793,8 @@ footer p {
     .populaires h2 {
         margin-right: 260px;
     }
-    #les_plus_populaires :nth-child(3) figcaption p {
+    /*  -------------------------A REVOIR --------------------------------
+     #les_plus_populaires :nth-child(3) figcaption p {
         margin-block-end: 4em;
     }
     #les_plus_populaires :nth-child(4) figcaption p {
@@ -770,7 +805,7 @@ footer p {
     }
     .logementmarseille :nth-child(4) figcaption h3 {
         margin-block-end: 0.9rem;
-    }
+    } */
     .logementmarseille figure {
         height: auto;
     }
